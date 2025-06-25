@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Inspiration - Dr. A.P.J. Abdul Kalam</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f0f8ff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .marquee-container {
+      position: relative;
+      background: #fff;
+      overflow: hidden;
+      height: 120px;
+      border-bottom: 2px solid #0073e6;
+    }
+
+    .marquee-text {
+      white-space: nowrap;
+      display: inline-block;
+      font-size: 28px;
+      color: #005b96;
+      padding-top: 40px;
+      animation: scroll 15s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .drop {
+      position: absolute;
+      top: -40px;
+      font-size: 24px;
+      animation: dropDown 4s linear infinite;
+      pointer-events: none;
+      color: #ff69b4;
+    }
+
+    @keyframes dropDown {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(120px);
+        opacity: 0;
+      }
+    }
+
+    .content {
+      max-width: 850px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #0073e6;
+    }
+
+    .quote-box {
+      background: #e6f3ff;
+      border-left: 5px solid #0073e6;
+      padding: 20px;
+      margin: 20px 0;
+      font-style: italic;
+      font-size: 18px;
+      color: #444;
+      border-radius: 8px;
+    }
+
+    ul {
+      padding-left: 20px;
+      line-height: 1.8;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .profile-img {
+      display: block;
+      margin: 20px auto;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Marquee Header with Drop Animation -->
+  <div class="marquee-container">
+    <div class="marquee-text">
+      🌸✨🌸✨🌸 My Inspiration | Dr. A.P.J. Abdul Kalam 🌸✨🌸✨🌸
+    </div>
+
+    <!-- Falling 🌸 & ✨ inside marquee -->
+    <script>
+      const marquee = document.querySelector('.marquee-container');
+      const symbols = ['🌸', '✨'];
+
+      function createDrop() {
+        const drop = document.createElement('div');
+        drop.className = 'drop';
+        drop.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+        drop.style.left = Math.random() * marquee.offsetWidth + 'px';
+        drop.style.animationDuration = (2 + Math.random() * 3) + 's';
+        drop.style.fontSize = (16 + Math.random() * 10) + 'px';
+        marquee.appendChild(drop);
+
+        setTimeout(() => {
+          marquee.removeChild(drop);
+        }, 4000);
+      }
+
+      setInterval(createDrop, 300);
+    </script>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <img class="profile-img" src="apj3.jpg" alt="Dr. A.P.J. Abdul Kalam">
+
+    <h2>About Dr. A.P.J. Abdul Kalam</h2>
+    <p>
+      Dr. Avul Pakir Jainulabdeen Abdul Kalam was an Indian aerospace scientist and the 11th President of India. Known as the "Missile Man of India", he was a key figure in the development of India’s missile and nuclear programs. Despite his high achievements, he led a simple life and was deeply respected for his humility and dedication to education and science.
+    </p>
+
+    <div class="quote-box">
+      "Dream, dream, dream. Dreams transform into thoughts and thoughts result in action."  
+      <br>– Dr. A.P.J. Abdul Kalam
+    </div>
+
+    <h2>Why He Inspires Me</h2>
+    <ul>
+      <li>He rose from a poor family to become the President of India.</li>
+      <li>He contributed to ISRO and DRDO, strengthening India’s defense and space programs.</li>
+      <li>He remained humble, always lived simply, and respected all religions.</li>
+      <li>He dedicated his life to motivating students and believed in the power of youth.</li>
+      <li>His speeches and books ignite dreams in the minds of young Indians like me.</li>
+    </ul>
+
+    <h2>What I Learn from Him</h2>
+    <ul>
+      <li>Stay humble, no matter how successful you become.</li>
+      <li>Work hard and never stop learning.</li>
+      <li>Believe in your dreams and make them happen with action.</li>
+      <li>Serve the country and use your knowledge for the betterment of others.</li>
+      <li>Be disciplined, honest, and a good human being.</li>
+    </ul>
+
+    <p>
+      As a computer science student aiming to crack GATE and build a meaningful career in technology and public service, I deeply relate to Dr. Kalam’s values and vision. He is not just my inspiration—he is my role model.
+    </p>
+
+    <div class="footer">
+      — Created by Irfan Nanasana | June 2025
+    </div>
+  </div>
+
+</body>
+</html>
